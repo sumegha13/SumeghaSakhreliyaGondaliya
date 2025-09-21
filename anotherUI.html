@@ -1,0 +1,446 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sumegha Gondaliya | Portfolio</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card-bg: #161b22;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --primary: #58a6ff;
+      --accent: #2ea043;
+      --highlight: linear-gradient(90deg, #58a6ff, #2ea043);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      min-height: 100vh;
+      line-height: 1.7;
+    }
+
+    /* Sidebar */
+    aside {
+      width: 300px;
+      background: var(--card-bg);
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      border-right: 1px solid #30363d;
+      overflow-y: auto;
+    }
+    aside h1 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+    aside h2 {
+      font-size: 1rem;
+      font-weight: normal;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    /* Tech Highlights */
+    .tech-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .tech-highlights span {
+      background: #21262d;
+      border: 1px solid #30363d;
+      color: var(--primary);
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 12px;
+      transition: all 0.2s ease;
+    }
+    .tech-highlights span:hover {
+      background: var(--primary);
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .contact a {
+      display: block;
+      margin: 0.6rem 0;
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+    .contact a:hover {
+      color: var(--accent);
+    }
+    .btn {
+      margin-top: 2rem;
+      padding: 0.8rem 1.6rem;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      text-align: center;
+      display: inline-block;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      background: #3fb950;
+    }
+
+    /* Sidebar Skills */
+    .skills-block {
+      margin-top: 2rem;
+      width: 100%;
+    }
+    .skills-block h3 {
+      font-size: 1rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #30363d;
+      padding-bottom: 0.3rem;
+      text-align: left;
+    }
+    .bar {
+      margin-bottom: 1rem;
+    }
+    .bar span {
+      display: block;
+      font-size: 0.85rem;
+      margin-bottom: 0.3rem;
+      color: var(--muted);
+    }
+    .progress {
+      background: #21262d;
+      border-radius: 10px;
+      height: 8px;
+      overflow: hidden;
+    }
+    .progress div {
+      height: 100%;
+      background: var(--primary);
+      border-radius: 10px;
+    }
+
+    /* Main content */
+    main {
+      margin-left: 300px;
+      padding: 3rem 2.5rem;
+      flex: 1;
+    }
+
+    section {
+      background: var(--card-bg);
+      border-radius: 14px;
+      padding: 2rem 2.5rem;
+      margin-bottom: 2.5rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    section:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.35);
+    }
+    section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 100%;
+      background: var(--highlight);
+      border-radius: 6px 0 0 6px;
+    }
+    section h3 {
+      color: var(--primary);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.2rem;
+      font-size: 1.4rem;
+      border-bottom: 1px solid #30363d;
+    }
+    h4 {
+      margin: 1.2rem 0 0.6rem;
+      color: var(--text);
+      font-size: 1.1rem;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li {
+      margin-bottom: 0.7rem;
+      font-size: 0.95rem;
+    }
+    ul li::before {
+      content: "▹";
+      color: var(--primary);
+      margin-right: 0.6rem;
+    }
+
+    /* Tech Stack Badges */
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.5rem 0 1rem;
+    }
+    .tech-stack span {
+      background: #21262d;
+      border: 1px solid #30363d;
+      color: var(--primary);
+      font-size: 0.85rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      transition: all 0.2s ease;
+    }
+    .tech-stack span:hover {
+      background: var(--primary);
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    footer a {
+      color: var(--primary);
+      margin: 0 0.6rem;
+      text-decoration: none;
+    }
+
+    /* Mobile */
+    @media (max-width: 900px) {
+      body {
+        flex-direction: column;
+      }
+      aside {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid #30363d;
+        flex-direction: column;
+        padding: 2rem 1rem;
+      }
+      main {
+        margin-left: 0;
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <aside>
+    <h1>Sumegha Sakhreliya Gondaliya</h1>
+    <h2>Senior Software Engineer<br/>AWS Certified Solution Architect - Associate</h2>
+
+    <div class="contact">
+      <a href="mailto:sumegha137@gmail.com">Email</a>
+      <a href="tel:+919106280625">Phone</a>
+      <a href="http://www.linkedin.com/in/sumegha-sakhreliya-gondaliya-a51a0638" target="_blank">LinkedIn</a>
+      <a href="https://github.com/sumegha13" target="_blank">GitHub</a>
+    </div>
+    <a class="btn" href="https://github.com/sumegha13/SumeghaSakhreliyaGondaliya/raw/main/assets/document/Sumegha_Gondaliya_.NET_8YR.pdf" download>
+      📄 Download Resume
+    </a>
+
+    <!-- Soft Skills -->
+    <div class="skills-block">
+      <h3>Soft Skills</h3>
+      <div class="bar">
+        <span>Leadership & Mentorship</span>
+        <div class="progress"><div style="width:90%"></div></div>
+      </div>
+      <div class="bar">
+        <span>Problem Solving</span>
+        <div class="progress"><div style="width:95%"></div></div>
+      </div>
+      <div class="bar">
+        <span>Communication</span>
+        <div class="progress"><div style="width:85%"></div></div>
+      </div>
+      <div class="bar">
+        <span>Agile Delivery</span>
+        <div class="progress"><div style="width:88%"></div></div>
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <div class="skills-block">
+      <h3>Languages</h3>
+      <div class="bar">
+        <span>English</span>
+        <div class="progress"><div style="width:90%"></div></div>
+      </div>
+      <div class="bar">
+        <span>Hindi</span>
+        <div class="progress"><div style="width:100%"></div></div>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <section>
+      <h3>Summary</h3>
+      <p>
+        AWS Certified Solution Architect with 8+ years of experience in .NET full-stack development, 
+        cloud-native systems, and microservices. Strong expertise in enterprise banking applications, 
+        cloud transformation, and Kafka streaming. Proven record of delivering scalable, secure, 
+        and innovative solutions that reduce costs, improve efficiency, and enhance customer experience. 
+        Passionate about leveraging AI tools to accelerate delivery by 50–60%.
+      </p>
+    </section>
+
+    <section>
+      <h3>Skills</h3>
+      <ul>
+        <li><strong>Backend:</strong> ASP.NET, .NET Core, MVC, Entity Framework, C#</li>
+        <li><strong>Frontend:</strong> React, Angular, Next.js, JavaScript, Bootstrap</li>
+        <li><strong>Cloud & DevOps:</strong> AWS (Certified), GitHub Actions, TeamCity, Octopus</li>
+        <li><strong>Architecture:</strong> Microservices, Kafka (SME), RabbitMQ</li>
+        <li><strong>Testing:</strong> NUnit, XUnit, TDD/BDD</li>
+        <li><strong>Productivity & AI:</strong> GitHub Copilot, AI-assisted testing</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Experience</h3>
+      <h4>Senior Software Engineer – Commonwealth Bank of Australia (2022–Present)</h4>
+      <ul>
+        <li>Architected scalable microservices hosted on AWS, enabling high availability for millions of users</li>
+        <li>Built CI/CD pipelines with GitHub Actions and TeamCity, improving release cycles by 40%</li>
+        <li>Developed digital banking automation, reducing customer care calls by 100%</li>
+        <li>Accelerated delivery by 50–60% using Generative AI tools for coding, testing, and reviews</li>
+      </ul>
+
+      <h4>Consultant – Capgemini (2021–2022)</h4>
+      <ul>
+        <li>Modernized legacy VB.NET apps to .NET Core, improving performance and maintainability</li>
+        <li>Independently managed requirements, delivery, and CI/CD deployment</li>
+        <li>Recognized as <strong>Star of the Month</strong> for strategic client contributions</li>
+      </ul>
+
+      <h4>Lead Application Development – Concentrix (2020–2021)</h4>
+      <ul>
+        <li>Designed and delivered onboarding platforms improving HR and employee experience</li>
+        <li>Orchestrated enterprise software deployments with zero downtime</li>
+        <li>Awarded multiple times for outstanding contributions to project delivery</li>
+      </ul>
+
+      <h4>Software Analyst – Epicminds IT (2018–2020)</h4>
+      <ul>
+        <li>Delivered full SDLC projects using C# and .NET MVC</li>
+        <li>Created workflow templates improving user efficiency</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Current Projects at Commonwealth Bank of Australia</h3>
+
+      <h4>1. Digital Banking Application Status Tracking</h4>
+      <p>
+        Customer-facing solution to eliminate customer care calls by enabling users to 
+        track their application status directly on NetBank (CBA Web/Mobile Application).
+      </p>
+      <div class="tech-stack">
+        <span>Next.js</span>
+        <span>Angular</span>
+        <span>React</span>
+        <span>.NET Web API</span>
+        <span>AWS Hosting</span>
+        <span>JWT Auth</span>
+        <span>LIXI / BIAN API</span>
+        <span>Observe</span>
+        <span>Obstack</span>
+        <span>CI/CD (Git + GitHub Actions)</span>
+        <span>BDD</span>
+        <span>TDD</span>
+        <span>AI Tools</span>
+      </div>
+
+      <h4>2. Kafka Migration & SME Leadership</h4>
+      <p>
+        Led migration of Kafka consumers from Java to .NET, ensuring business continuity and acting 
+        as SME across multiple squads.
+      </p>
+      <div class="tech-stack">
+        <span>.NET Core Console</span>
+        <span>Kafka</span>
+        <span>AWS</span>
+        <span>Kafka Topics on AWS</span>
+      </div>
+      <ul>
+        <li>Designed and delivered end-to-end Kafka stream migration</li>
+        <li>Guided cross-team Kafka issue resolution</li>
+        <li>Established best practices for resilient, scalable message streaming</li>
+      </ul>
+
+      <h4>3. Paperless Transformation (Critical Requirement)</h4>
+      <p>
+        Delivered a rapid fix during the bank’s paperless initiative — nominees needed to be 
+        removed for new customers and updated seamlessly for existing ones.
+      </p>
+      <div class="tech-stack">
+        <span>.NET Core Web API</span>
+        <span>Angular</span>
+      </div>
+      <ul>
+        <li>Resolved incident under tight deadlines</li>
+        <li>Ensured compliance while enabling smooth customer onboarding</li>
+        <li>Demonstrated agility in handling high-priority, business-critical requirements</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Achievements & Certifications</h3>
+      <ul>
+        <li>AWS Certified Solutions Architect – Associate</li>
+        <li>Best Paper Award – IEEE ICCIC Conference 2014</li>
+        <li>Recognized twice at Concentrix for project excellence</li>
+        <li>Promoted to Senior Role within 6 months at CBA</li>
+        <li>Consistently top-ranked academically (District Top 10, Dual College Topper)</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© 2025 Sumegha Gondaliya</p>
+      <p>
+        <a href="http://www.linkedin.com/in/sumegha-sakhreliya-gondaliya-a51a0638">LinkedIn</a> |
+        <a href="https://github.com/sumegha13">GitHub</a>
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
