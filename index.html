@@ -1,148 +1,190 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sumegha Sakhreliya Gondaliya</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sumegha Gondaliya | Portfolio</title>
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
       margin: 0;
-      background-color: #f9f9f9;
-      color: #333;
-      text-align: center;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #0d1117;
+      color: #e6edf3;
+      line-height: 1.6;
     }
     header {
-      padding: 2rem;
-      background-color: #e3f2fd;
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #161b22;
     }
-    img.profile {
-      width: 150px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: #58a6ff;
     }
-    h1 {
-      margin: 0.5rem 0;
+    header h2 {
+      font-size: 1.2rem;
+      font-weight: normal;
+      color: #8b949e;
+    }
+    .contact a {
+      margin: 0 0.5rem;
+      color: #58a6ff;
+      text-decoration: none;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: #238636;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
     }
     section {
-      padding: 2rem;
+      padding: 2rem 1rem;
       max-width: 900px;
       margin: auto;
-      text-align: left;
     }
-    h2 {
-      color: #1976d2;
-      border-bottom: 2px solid #bbdefb;
+    section h3 {
+      border-bottom: 2px solid #30363d;
       padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      color: #58a6ff;
+    }
+    h4 {
+      margin-top: 1rem;
+      color: #e6edf3;
     }
     ul {
       list-style: none;
-      padding-left: 0;
+      padding: 0;
     }
-    li {
-      margin-bottom: 0.5rem;
-    }
-    h3 {
-      margin-top: 1.5rem;
-      color: #0d47a1;
+    ul li::before {
+      content: "▹";
+      color: #58a6ff;
+      margin-right: 0.5rem;
     }
     footer {
+      text-align: center;
       padding: 1rem;
-      background-color: #e3f2fd;
-      font-size: 0.9rem;
+      background: #161b22;
+      color: #8b949e;
     }
-    a {
-      color: #1976d2;
+    footer a {
+      color: #58a6ff;
       text-decoration: none;
+      margin: 0 0.5rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Sumegha Sakhreliya Gondaliya</h1>
-    <p>AWS Certified Solution Architect | Senior Software Engineer</p>
-    <p><a href="mailto:sumegha137@gmail.com">sumegha137@gmail.com</a> | 📞 +91 910 628 0625</p>
+    <h1>Sumegha Gondaliya</h1>
+    <h2>Senior Software Engineer | Cloud Architect</h2>
+    <div class="contact">
+      <a href="mailto:sumegha137@gmail.com">Email</a> |
+      <a href="tel:+919106280625">Phone</a> |
+      <a href="http://www.linkedin.com/in/sumegha-sakhreliya-gondaliya-a51a0638" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/sumegha13" target="_blank">GitHub</a>
+    </div>
+    <a class="btn" href="Sumegha_Gondaliya_.NET_8YR.pdf" download>📄 Download Resume</a>
   </header>
 
   <section>
-  <h2>About Me</h2>
-  <p><b>AWS Certified Solution Architect</b> with 8+ years of experience working as <b>senior software engineer </b> in scalable banking and enterprise applications. Passionate about cloud architecture, modernization, and mentoring. Currently leading cloud migration projects at Commonwealth Bank of Australia, with a strong focus on AWS, .NET, and Generative AI tools for productivity.</p>
-</section>
+    <h3>Summary</h3>
+    <p>
+      AWS Certified Solution Architect with 8+ years of experience in .NET full-stack development, 
+      cloud-native systems, and microservices. Strong expertise in enterprise banking applications, 
+      cloud transformation, and Kafka streaming. Proven record of delivering scalable, secure, 
+      and innovative solutions that reduce costs, improve efficiency, and enhance customer experience. 
+      Passionate about leveraging AI tools to accelerate delivery by 50–60%.
+    </p>
+  </section>
 
   <section>
-    <h2>Core Competencies</h2>
+    <h3>Skills</h3>
     <ul>
-      <li><strong>Cloud Architecture:</strong> AWS (EC2, Lambda, S3, RDS, CloudWatch), GitHub Actions, TeamCity, Octopus</li>
-      <li><strong>Backend Development:</strong> .NET Core, ASP.NET MVC, C#, LINQ, Entity Framework</li>
-      <li><strong>Frontend & UI:</strong> HTML5, CSS3, JavaScript, Bootstrap, jQuery, Razor Views, Angular, React, Next.js</li>
-      <li><strong>DevOps & CI/CD:</strong> CI/CD pipelines, Infrastructure as Code, GitHub Actions, Octopus Deploy</li>
-      <li><strong>Database & Messaging:</strong> SQL Server, MySQL, Kafka (migration & integration)</li>
-      <li><strong>AI & Automation:</strong> Generative AI tools (Copilot, Roo Code, Cline) for delivery acceleration</li>
-      <li><strong>Testing & Quality:</strong> NUnit, XUnit, Postman, Swagger</li>
-      <li><strong>Leadership:</strong> Team mentoring, cross-functional collaboration, agile delivery</li>
+      <li><strong>Backend:</strong> ASP.NET, .NET Core, MVC, Entity Framework, C#</li>
+      <li><strong>Frontend:</strong> React, Angular, Next.js, JavaScript, Bootstrap</li>
+      <li><strong>Cloud & DevOps:</strong> AWS (Certified), GitHub Actions, TeamCity, Octopus</li>
+      <li><strong>Architecture:</strong> Microservices, Kafka (SME), RabbitMQ</li>
+      <li><strong>Testing:</strong> NUnit, XUnit, TDD/BDD</li>
+      <li><strong>Productivity & AI:</strong> GitHub Copilot, AI-assisted testing</li>
     </ul>
   </section>
 
   <section>
-    <h2>Professional Experience</h2>
-
-    <h3>Commonwealth Bank of Australia</h3>
-    <p><em>Senior Software Engineer | June 2023 – Present</em></p>
+    <h3>Experience</h3>
+    <h4>Senior Software Engineer – Commonwealth Bank of Australia (2022–Present)</h4>
     <ul>
-      <li>Architected scalable AWS backend and Next.js frontend for enterprise banking platform</li>
-      <li>Led Kafka migration from Java to .NET, improving performance and maintainability</li>
-      <li>Designed CI/CD pipelines using GitHub Actions and TeamCity for zero-downtime deployments</li>
-      <li>Integrated Generative AI tools to accelerate delivery and reduce manual effort</li>
+      <li>Lead Kafka migration from Java to .NET, ensuring business continuity and risk mitigation</li>
+      <li>Architected scalable microservices hosted on AWS, enabling high availability for millions of users</li>
+      <li>Built CI/CD pipelines with GitHub Actions and TeamCity, improving release cycles by 40%</li>
+      <li>Developed digital banking automation, reducing customer care calls by 100%</li>
+      <li>Guided teams as <strong>Kafka SME</strong>, solving critical streaming issues across multiple crews</li>
+      <li>Accelerated delivery by 50–60% using Generative AI tools for coding, testing, and reviews</li>
     </ul>
 
-    <h3>Capgemini</h3>
-    <p><em>Consultant | Sept 2021 – June 2022</em></p>
+    <h4>Consultant – Capgemini (2021–2022)</h4>
     <ul>
-      <li>Modernized legacy ASP.NET MVC applications to .NET Core with improved security and performance</li>
-      <li>Led end-to-end development and deployment for financial applications</li>
-      <li>Collaborated with European clients to align architecture with compliance standards</li>
+      <li>Modernized legacy VB.NET apps to .NET Core, improving performance and maintainability</li>
+      <li>Independently managed requirements, delivery, and CI/CD deployment</li>
+      <li>Recognized as <strong>Star of the Month</strong> for strategic client contributions</li>
     </ul>
 
-    <h3>Concentrix</h3>
-    <p><em>Lead Application Developer | Oct 2018 – Sept 2021</em></p>
+    <h4>Lead Application Development – Concentrix (2020–2021)</h4>
     <ul>
-      <li>Orchestrated large-scale onboarding solutions for enterprise clients</li>
-      <li>Implemented microservices architecture and CI/CD pipelines</li>
-      <li>Received “Unsung Hero” award for exceptional delivery and team leadership</li>
+      <li>Designed and delivered onboarding platforms improving HR and employee experience</li>
+      <li>Orchestrated enterprise software deployments with zero downtime</li>
+      <li>Awarded multiple times for outstanding contributions to project delivery</li>
     </ul>
 
-  </section>
-
-  <section>
-    <h2>Education</h2>
+    <h4>Software Analyst – Epicminds IT (2018–2020)</h4>
     <ul>
-      <li><strong>Master of Engineering (IT)</strong> – Parul University | CPI: 8.5</li>
-      <li><strong>Bachelor of Engineering (IT)</strong> – Shri S’ad Vidya Mandal Institute | 71.22%</li>
+      <li>Delivered full SDLC projects using C# and .NET MVC</li>
+      <li>Created workflow templates improving user efficiency</li>
     </ul>
   </section>
 
   <section>
-    <h2>Awards & Publications</h2>
+    <h3>Current Project</h3>
+    <h4>Digital Banking Application Status Tracking – Commonwealth Bank of Australia</h4>
+    <p>
+      Leading a project to empower customers to track their application status on NetBank 
+      (CBA Web/Mobile Application), eliminating the need for customer care calls.
+    </p>
     <ul>
-      <li>Best Paper Award – IEEE ICCIC 2014</li>
-      <li>Concentrix Unsung Hero – June 2021</li>
-      <li>Capgemini Star of the Month – Euroclear</li>
-      <li>3 International & 2 National Publications</li>
+      <li><strong>Tech Stack:</strong> Next.js, Angular, React, .NET Web API, AWS Hosting</li>
+      <li>Implemented secure JWT-based authentication</li>
+      <li>Adopted LIXI Standards for BIAN API compliance</li>
+      <li>Integrated logging and monitoring via Observe & Obstack</li>
+      <li>Implemented CI/CD with Git + GitHub Actions</li>
+      <li>Followed <strong>BDD & TDD</strong> practices for high-quality delivery</li>
+      <li>Accelerated dev & testing by 50–60% using AI tools</li>
+      <li>Serving as <strong>Kafka SME</strong>, resolving complex issues across multiple squads</li>
     </ul>
   </section>
-  
+
   <section>
-  <h2>Resume</h2>
-  <a href="https://raw.githubusercontent.com/sumegha13/SumeghaSakhreliyaGondaliya/main/assets/document/Sumegha_Gondaliya_.NET_8YR.pdf" download>
-    <button style="padding: 10px 20px; font-size: 16px; background-color: #1976d2; color: white; border: none; border-radius: 5px; cursor: pointer;">
-      ⬇️ Download My Resume
-    </button>
-  </a>
-</section>
+    <h3>Achievements & Certifications</h3>
+    <ul>
+      <li>AWS Certified Solutions Architect – Associate</li>
+      <li>Best Paper Award – IEEE ICCIC Conference 2014</li>
+      <li>Recognized twice at Concentrix for project excellence</li>
+      <li>Promoted to Senior Role within 6 months at CBA</li>
+      <li>Consistently top-ranked academically (District Top 10, Dual College Topper)</li>
+    </ul>
+  </section>
 
   <footer>
-    <p>© 2025 Sumegha Sakhreliya Gondaliya</p>
+    <p>© 2025 Sumegha Gondaliya</p>
+    <p>
+      <a href="http://www.linkedin.com/in/sumegha-sakhreliya-gondaliya-a51a0638">LinkedIn</a> |
+      <a href="https://github.com/sumegha13">GitHub</a>
+    </p>
   </footer>
 </body>
 </html>
